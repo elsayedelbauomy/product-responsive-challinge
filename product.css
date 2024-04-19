@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-mons:"Montserrat", sans-serif;
+    --font-fra:"Fraunces", serif;
+}
+
+body {
+    font-family: var(--font-mons);
+}
+
+section {
+    width: 100%;
+    height: 100lvh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(30, 38%, 92%);
+}
+
+main {
+    display: flex;
+    width: 600px;
+    background-color:  hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+
+main .image {
+    background-image: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+@media (max-width:767px) {
+    section {
+        padding: 20px;
+    }
+    main  {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main .image {
+        background-image: url(./images/image-product-mobile.jpg);
+        width:100%;
+        height: 200px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+}
+
+main > div {
+    padding: 40px;
+    width: 50%;
+}
+
+@media (max-width:767px) {
+    main > div { 
+        width: 100%;
+        padding: 20px;
+    }
+}
+main > div >  span {
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+main > div >  h1 {
+    font-family: var(--font-fra);
+    font-size: 2em;
+}
+
+
+main > div >  p {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: hsl(228, 12%, 48%);
+    font-weight: bold;
+}
+
+main > div > .price {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+main > div > .price span:first-child {
+    display: block;
+    color: hsl(158, 36%, 37%);
+    font-size: 35px;
+    font-weight: bold;
+    font-family: var(--font-fra);
+}
+
+main > div > .price span:last-child {
+    font-size: 14px;
+    font-weight: bold;
+    color:  hsl(228, 12%, 48%);
+}
+
+@media (max-width:767px) {
+    main > div > .price  {
+        justify-content: flex-start;
+    }
+
+    main > div > .price span:first-child {
+        margin-right: 20px;
+    }
+}
+
+main > div > a {
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    display: block;
+    background-color:  hsl(158, 36%, 37%);
+    border-radius: 10px;
+    padding: 15px;
+    color: #ffff;
+    text-align: center;
+
+}
+
+main > div > a img {
+    margin-right: 5px;
+}
